@@ -31,13 +31,14 @@ Download YouTube playlists as tagged M4A files.
 python main.py [options] PLAYLIST_URL
 
 Options:
-  --outdir DIR        Output folder (default: out_music)
+  --out DIR           Output folder (default: out_music)
   --model NAME        Ollama model (default: llama3.2)
   --cookies FILE      Path to cookies.txt for YouTube auth
   --limit NUM         Number of videos to download (0 = all)
   --sleep SECONDS     Wait between downloads (default: 1.0)
   --aac-bitrate RATE  AAC bitrate target, e.g., "256k", "320k" (default: 256k)
   --workers NUM       Parallel conversion threads (default: half CPU cores)
+  --queue-size NUM    Max queued downloaded items waiting for workers (default: 32)
   --refresh-playlist  Force re-extract playlist from YouTube
 ```
 
